@@ -4,6 +4,8 @@ services:
     image: omarpecos/api-record
     restart: always
     ports:
-      - '9000:9000'
+      - '${PORT}:${PORT}'
     environment:
       NODE_ENV: production
+    env_file:
+      - .env
